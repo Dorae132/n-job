@@ -18,6 +18,7 @@ public interface AdminBiz {
 
     /**
      * callback
+     * 提供给执行器的回调
      *
      * @param callbackParamList
      * @return
@@ -29,6 +30,7 @@ public interface AdminBiz {
 
     /**
      * registry
+     * 执行器注册接口
      *
      * @param registryParam
      * @return
@@ -37,6 +39,7 @@ public interface AdminBiz {
 
     /**
      * registry remove
+     * 执行器下线接口
      *
      * @param registryParam
      * @return
@@ -48,6 +51,7 @@ public interface AdminBiz {
 
     /**
      * trigger job for once
+     * 调度任务
      *
      * @param jobId
      * @return

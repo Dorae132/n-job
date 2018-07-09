@@ -11,6 +11,7 @@ public class XxlJobLog {
 	private int id;
 	
 	// job info
+	// 任务信息
 	private int jobGroup;
 	private int jobId;
 
@@ -18,16 +19,19 @@ public class XxlJobLog {
 	private String glueType;
 
 	// execute info
+	// 执行器信息
 	private String executorAddress;
 	private String executorHandler;
 	private String executorParam;
 	
 	// trigger info
+	// 调度信息
 	private Date triggerTime;
 	private int triggerCode;
 	private String triggerMsg;
 	
 	// handle info
+	// 执行信息
 	private Date handleTime;
 	private int handleCode;
 	private String handleMsg;

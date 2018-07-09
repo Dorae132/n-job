@@ -69,16 +69,22 @@ public final class XxlJobDynamicScheduler implements ApplicationContextAware {
     // ---------------------- init + destroy ----------------------
     public void init() throws Exception {
         // admin registry monitor run
+    	// start the thread which monitor the executors(trigger registry) change.
         JobRegistryMonitorHelper.getInstance().start();
 
         // admin monitor run
+        // monitor the job's status, warn when the status is failure.(email or log)
         JobFailMonitorHelper.getInstance().start();
 
         // admin-server(spring-mvc)
+        // rpc service which base on jetty
+        // 包括提供给执行器的回调、上线、下线以及触发调度的接口
+        // 这里没有start(), 如何启动的服务器？通过jettyhandler？
         NetComServerFactory.putService(AdminBiz.class, XxlJobDynamicScheduler.adminBiz);
         NetComServerFactory.setAccessToken(accessToken);
 
         // init i18n
+        // 提示信息配置化
         initI18n();
 
         // valid

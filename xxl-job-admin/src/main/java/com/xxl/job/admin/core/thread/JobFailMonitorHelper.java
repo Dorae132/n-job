@@ -101,6 +101,7 @@ public class JobFailMonitorHelper {
 	}
 
 	public void toStop(){
+		// 这里应该不太合理，是不是应该先join？
 		toStop = true;
 		// interrupt and wait
 		monitorThread.interrupt();
@@ -112,6 +113,7 @@ public class JobFailMonitorHelper {
 	}
 	
 	// producer
+	// insert the queue and return immediately, this step don't care if it is successful.
 	public static void monitor(int jobLogId){
 		getInstance().queue.offer(jobLogId);
 	}

@@ -73,18 +73,22 @@ public class XxlJobExecutor implements ApplicationContextAware {
     // ---------------------- start + stop ----------------------
     public void start() throws Exception {
         // init admin-client
+    	// 初始化与服务器链接的代理类，为每一个url初始化一个代理类
         initAdminBizList(adminAddresses, accessToken);
 
+        // 读取项目中带有jobhandler注解的bean，并且维护在map中，所以当一个工程中有多个jobhadler同名时，会出现覆盖的情况？
         // init executor-jobHandlerRepository
         initJobHandlerRepository(applicationContext);
 
         // init logpath
+        // 初始化日志目录
         XxlJobFileAppender.initLogPath(logPath);
 
         // init executor-server
         initExecutorServer(port, ip, appName, accessToken);
 
         // init JobLogFileCleanThread
+        // 初始化日志清理线程
         JobLogFileCleanThread.getInstance().start(logRetentionDays);
     }
     public void destroy(){

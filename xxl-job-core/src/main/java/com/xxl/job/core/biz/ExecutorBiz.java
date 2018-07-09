@@ -11,13 +11,14 @@ public interface ExecutorBiz {
 
     /**
      * beat
+     * 用于执行器心跳检测
      * @return
      */
     public ReturnT<String> beat();
 
     /**
      * idle beat
-     *
+     * 执行器空闲检测
      * @param jobId
      * @return
      */
@@ -25,6 +26,7 @@ public interface ExecutorBiz {
 
     /**
      * kill
+     * 终止任务
      * @param jobId
      * @return
      */
@@ -32,6 +34,7 @@ public interface ExecutorBiz {
 
     /**
      * log
+     * 记录日志
      * @param logDateTim
      * @param logId
      * @param fromLineNum
@@ -41,6 +44,7 @@ public interface ExecutorBiz {
 
     /**
      * run
+     * 执行任务
      * @param triggerParam
      * @return
      */

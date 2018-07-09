@@ -22,6 +22,7 @@ public class NetComClientProxy implements FactoryBean<Object> {
 	private Class<?> iface;
 	private String serverAddress;
 	private String accessToken;
+	// http请求封装的客户端，并没有jetty的相关依赖
 	private JettyClient client = new JettyClient();
 	public NetComClientProxy(Class<?> iface, String serverAddress, String accessToken) {
 		this.iface = iface;
