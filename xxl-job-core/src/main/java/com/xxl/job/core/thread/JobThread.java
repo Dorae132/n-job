@@ -76,6 +76,7 @@ public class JobThread extends Thread{
 		 * 在阻塞出抛出InterruptedException异常,但是并不会终止运行的线程本身；
 		 * 所以需要注意，此处彻底销毁本线程，需要通过共享变量方式；
 		 */
+		// 这里的注释有问题，因为这里是interrupt中断阻塞，导致抛出异常，但是处理了异常，真正中终止线程的是toStop
 		this.toStop = true;
 		this.stopReason = stopReason;
 	}

@@ -59,6 +59,7 @@ public class TriggerCallbackThread {
                         if (callback != null) {
 
                             // callback list param
+                        	// 这里有可能会造成任务重复调用。
                             List<HandleCallbackParam> callbackParamList = new ArrayList<HandleCallbackParam>();
                             int drainToNum = getInstance().callBackQueue.drainTo(callbackParamList);
                             callbackParamList.add(callback);
