@@ -33,6 +33,7 @@ public class GlueFactory {
 
 	/**
 	 * inject action of spring
+	 * 将spring的bean注入生成的bean中，建立依赖
 	 * @param instance
 	 */
 	private void injectService(Object instance){
