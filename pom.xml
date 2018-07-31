@@ -8,7 +8,6 @@
 
 	<name>${project.artifactId}</name>
 	<description>A lightweight distributed task scheduling framework.</description>
-	<url>http://www.xuxueli.com/</url>
 
 	<modules>
 		<module>xxl-job-core</module>
@@ -94,18 +93,10 @@
 		</license>
 	</licenses>
 
-	<scm>
-		<tag>master</tag>
-		<url>https://github.com/xuxueli/xxl-job.git</url>
-		<connection>scm:git:https://github.com/xuxueli/xxl-job.git</connection>
-		<developerConnection>scm:git:git@github.com:xuxueli/xxl-job.git</developerConnection>
-	</scm>
 	<developers>
 		<developer>
-			<id>XXL</id>
-			<name>xuxueli</name>
-			<email>931591021@qq.com</email>
-			<url>https://github.com/xuxueli</url>
+			<id>n-XXL</id>
+			<name>Dorae</name>
 		</developer>
 	</developers>
 
@@ -162,7 +153,7 @@
                     </plugin>
 				</plugins>
 			</build>
-			<distributionManagement>
+			<!-- <distributionManagement>
 				<snapshotRepository>
 					<id>oss</id>
 					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -171,7 +162,7 @@
 					<id>oss</id>
 					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 				</repository>
-			</distributionManagement>
+			</distributionManagement> -->
 		</profile>
 	</profiles>
 
